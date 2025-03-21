@@ -43,7 +43,7 @@ library DevOpsTools {
         for (uint256 i = 0; i < entries.length; i++) {
             Vm.DirEntry memory entry = entries[i];
             if (
-                entry.path.contains(string.concat("/", vm.toString(chainId), "/")) && entry.path.contains(".json")
+                entry.path.contains(string.concat("\\", vm.toString(chainId), "\\")) && entry.path.contains(".json")
                     && !entry.path.contains("dry-run")
             ) {
                 runProcessed = true;
